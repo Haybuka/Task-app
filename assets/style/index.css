@@ -231,8 +231,10 @@ main ul{
 }
 
 @media screen and (max-width:500px){
-    .container,.add-form.active,footer{
+    .container,footer{
         width: auto;
     }
-    
+    .add-form.active{
+        width: 360px;
+    }
 }
