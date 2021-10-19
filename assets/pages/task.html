@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/style/index.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+           <ul>
+               <li>
+                   <h1>My Tasks</h1>
+                   <span class="date-here"></span>
+               </li>
+               <li class="profile-img">
+                   <img src="/assets/img/WhatsApp Image 2021-06-29 at 5.35.59 AM.jpeg" alt="">
+               </li>
+           </ul>
+        </nav>
+        <form action="" class="add-form">
+            <div>
+                <label for="Title">Title</label>  
+                <input type="text" name="task-title" id="Title" placeholder="eg : shopping">
+            </div>
+            <div>
+                <label for="Description">Description</label>  
+              <input type="text" name="Description" id="Description" placeholder="Grocery shopping at ACE">
+            </div>
+            <span class="err-msg"></span>
+            <button>Add to task</button>
+        </form>
+        <main>
+            <section class="task-mode">
+                <p class="mode-active" id="pending">
+                    Pending
+                </p>
+                <p id="completed">
+                    Completed
+                </p>
+            </section>
+            <section class="display-task">
+                <ul class="pending task-view-active">
+                    
+                </ul>
+                <ul class="completed task-view-active">
+                   
+                </ul>
+
+            </section>           
+        </main>
+        
+    </div>
+    <footer>
+        <section class="add-task">
+            <p>
+               +
+            </p>
+      </section>
+        <ul>
+            <li>
+                <span></span>
+                <span></span>
+            </li>
+            <li>
+
+            </li>
+            <li>
+                . . .
+            </li>
+        </ul>
+    </footer>
+    <script src="/assets/script/index.js"></script>
+</body>
+</html>
