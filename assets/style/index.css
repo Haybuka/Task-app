@@ -130,6 +130,7 @@ main ul{
 .completed p{
     color: #7f7f7b;
     text-decoration: line-through;
+    cursor: pointer;
 }
 .completed img{
     width: 25px;

@@ -2,6 +2,7 @@ let taskmode = [...document.querySelectorAll('.task-mode p')];
 let addTask = document.querySelector('.add-task');
 let form = document.querySelector('form')
 let pendingUl= document.querySelector('.pending')
+let ulComplete = document.querySelector('.completed')
 let formInputs = [...document.querySelectorAll('form input')]
 let dateSpan = document.querySelector('.date-here');
 
@@ -132,7 +133,6 @@ pendingUl.addEventListener('click',function(e){
 
 //Create entries for completed mode
 function createComplete(text){
-   let ulComplete = document.querySelector('.completed')
    let pTag = document.createElement('p');
    let li = document.createElement('li');
    let img = document.createElement('img');
@@ -141,3 +141,9 @@ function createComplete(text){
    li.append(pTag,img);
    ulComplete.append(li)
 }
+
+//deleting completed task
+ulComplete.addEventListener('click',function(e){
+    let li = e.target.parentElement;
+    li.remove()
+})
