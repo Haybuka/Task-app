@@ -52,28 +52,27 @@ form.addEventListener('submit',function(e){
     let listItems = [...document.querySelectorAll('.pending li')];
 
     //check for empty title
-    if(!(title == '' && description == '')){
-        //check for duplicated entries 
-        //before rendering the new element
-            let duplicateItem = listItems.filter( li=>  li.lastElementChild.innerHTML.includes(description));
-            if(duplicateItem.length>=1){
-                form.querySelector('span').innerHTML ='This Task, or Title Already Exists'
-            }else{
-                let createdLi = createElement(title,description,time);
-                pendingUl.append(createdLi)
-                let allInput = [...document.querySelectorAll('form input')];
-            
-                allInput.forEach(input =>{
-                    input.id == 'Title' ? 
-                    input.previousElementSibling.innerHTML = input.previousElementSibling.htmlFor : ''
-                
-                    input.value =''
-                })
-            }
-    } else{
+    if((title == '' && description == '')){
         form.querySelector('span').innerHTML ='Entries can not be blank'
-    }
-    
+    } 
+
+    //check for duplicated entries 
+        //before rendering the new element
+        let duplicateItem = listItems.filter( li=>  li.lastElementChild.innerHTML.includes(description));
+        if(duplicateItem.length>=1){
+            form.querySelector('span').innerHTML ='This Task, or Title Already Exists'
+        }else{
+            let createdLi = createElement(title,description,time);
+            pendingUl.append(createdLi)
+            let allInput = [...document.querySelectorAll('form input')];
+        
+            allInput.forEach(input =>{
+                input.id == 'Title' ? 
+                input.previousElementSibling.innerHTML = input.previousElementSibling.htmlFor : ''
+            
+                input.value =''
+            })
+        }
 
 })
 
